@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	 <form onsubmit="validateEmail()">
+	 	<label>Email</label>
+	 	<input type="email" name="email" placeholder="Please enter your email" id="email">
+	 	<input type="submit" name="" value="validate">
+	 </form>
+	 <script type = "text/javascript">
+
+	 	function validateEmail() {
+	 		var EmailID = document.getElementById("email").value;
+	 		atpos = emailID.indexOf("@");
+	 		dotpos = emailID.lastIndexOf(".");
+
+	 		if (atpos < 1 || (dotpos - atpos < 2)) {
+	 			alert("Please enter correct email ID")
+	 			document.getElementById("email").focus() ;
+	 			return false;
+
+	 		}
+	 		return(true);
+
+	 	}
+	 </script>
+	</body>
+	</html>
